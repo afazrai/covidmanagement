@@ -1,0 +1,163 @@
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root
+{
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.header
+{
+    background-color: skyblue;
+    line-height: 70px;
+    padding-left: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p
+{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btnlogout
+{
+    float: right;
+    padding-right: 20px;
+}
+
+.container::after, .container::before
+{ 
+    display:none !important;
+}
+
+.container
+{
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "menu_lect menu_stud menu_daily menu_settings";
+    grid-gap: 2rem;
+}
+
+.menu_staff
+{
+    background-color: khaki;
+    grid-area: "menu_lect";
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_stud
+{
+    background-color: purple;
+    grid-area: "menu_stud";
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_daily
+{
+    background-color: aquamarine;
+    grid-area: "menu_daily";
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_settings
+{
+    background-color: dimgray;
+    grid-area: "menu_settings";
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+
+
+/*responsive interface */
+@media only screen and (max-width: 600px){
+
+:root
+{
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container
+{
+    margin-bottom:80px;
+    padding-bottom: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: 
+    "menu_lect"
+    "menu_stud"
+    "menu_daily"
+    "menu_settings";
+}
+
+.menu_staff
+{
+    background-color: khaki;
+    border-style: solid;
+    grid-area: "menu_lect";
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_stud
+{
+    background-color: purple;
+    grid-area: "menu_stud";
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_daily
+{
+    background-color: aquamarine;
+    grid-area: "menu_daily";
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.menu_settings
+{
+    background-color: dimgray;
+    grid-area: "menu_settings";
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+
+}

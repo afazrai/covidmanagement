@@ -1,0 +1,171 @@
+
+*
+{
+     padding: 0;
+     margin: 0;
+}
+
+nav
+{
+    position: fixed;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+.title
+{
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+ul
+{
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+ul li
+{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+.main_logo
+{
+    width: 30%;
+    display: block;
+    padding-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_design
+{
+    padding: 10px;
+}
+
+.error_login
+{
+    color: black;
+    font-size: 15px;
+}
+
+.label_design
+{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.login_form
+{
+    background-color: skyblue;
+    width: 400px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.footer
+{
+    text-align: center;
+    padding-top: 2px;
+    font-size: 11px;
+}
+
+
+/* responsive interface */
+@media only screen and (max-width: 600px){
+
+*
+{
+     padding: 0;
+     margin: 0;
+}
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.title
+{
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+ul
+{
+    display: none;
+}
+
+ul li
+{
+    margin: auto;
+}
+
+.main_logo
+{
+    width: 60%;
+    display: block;
+    padding-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_design
+{
+    padding: 10px;
+}
+
+.error_login
+{
+    color: black;
+    font-size: 10px;
+}
+
+.label_design
+{
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.login_form
+{
+    background-color: skyblue;
+    width: 300px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.footer
+{
+    text-align: center;
+    padding-top: 2px;
+    font-size: 8px;
+}
+
+}
