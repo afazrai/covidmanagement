@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- style.css called -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
    
     <?php 
 
@@ -21,7 +21,7 @@
 <body>
     
     <nav>
-        <label class="title">Covid-19 Student Management System</label>
+        <label class="title">Online Covid-19 Management System</label>
     </nav>
 
     <div class="section1">

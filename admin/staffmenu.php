@@ -55,12 +55,14 @@ session_start();
 <div class="card-body">
                         <div class="row">
                             <div class="col-md-7">
+                                
 
                                 <form action="" method="GET">
                                     <div class="input-group mb-3">
                                         <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search Staff">
                                         <button type="submit" class="btn btn-primary">Search</button>
                                         <input type="button" class="btn btn-primary" value="Reset" name="reset" onclick="window.location.href='staffmenu.php'">
+                                        
                                     </div>
                                 </form>
 
@@ -76,7 +78,7 @@ session_start();
                         <table class="table table-bordered" id="center">
                             <thead>
                                     <tr> 
-                                        <th>Numbers of Staff</th>
+                                        <th>Number of Staff</th>
                                     </tr>
                                <tbody>
                                    
@@ -86,16 +88,19 @@ session_start();
                                             <?php 
                                 
                                                 include 'getstaffamount.php'; 
-                                                echo '<b>'.$row.'</tr>';
+                                                echo '<h5>'.$row.'</h5>';
                             
                                             ?>
                                         </th>
                                     </tr>
+                                    
                                 
                                 </div>
                             </thead>
                             </tbody> 
                         </table>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        
                     </div>
                 </div>
             </div>
@@ -135,7 +140,6 @@ session_start();
                                                     <td><?= $items['phone']; ?></td>
                                                     <td><?= $items['email']; ?></td>
                                                     <td><?= $items['department']; ?></td>
-                                                    <?= $items['usertype']; ?>
                                                 </tr>
                                                 <?php
                                             }
