@@ -58,7 +58,7 @@ session_start();
 
                                 <form action="" method="GET">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search Student">
+                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search Staff">
                                         <button type="submit" class="btn btn-primary">Search</button>
                                         <input type="button" class="btn btn-primary" value="Reset" name="reset" onclick="window.location.href='staffmenu.php'">
                                     </div>
@@ -85,10 +85,10 @@ session_start();
                                         <th>
                                             <?php 
                                 
-                                            include 'getstaffdata.php'; 
+                                                include 'getstaffamount.php'; 
                                                 echo '<b>'.$row.'</tr>';
                             
-                                                ?>
+                                            ?>
                                         </th>
                                     </tr>
                                 
@@ -115,13 +115,15 @@ session_start();
                             </thead>
                             <tbody>
                                 <?php 
-                                    $con = mysqli_connect("localhost","root","","onlinecovidproject");
+                                    include '../dbconfig.php'; 
                                     // $data=mysqli_connect($host,$user,$password,$db);
                                     if(isset($_GET['search']))
+                                    
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM user WHERE CONCAT(username) LIKE '%$filtervalues%' ";
-                                        $query_run = mysqli_query($con, $query);
+                                        $query = "SELECT * FROM user WHERE usertype='staff' AND CONCAT(username) LIKE '$filtervalues' ";
+                            
+                                        $query_run = mysqli_query($data, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
                                         {
@@ -133,6 +135,7 @@ session_start();
                                                     <td><?= $items['phone']; ?></td>
                                                     <td><?= $items['email']; ?></td>
                                                     <td><?= $items['department']; ?></td>
+                                                    <?= $items['usertype']; ?>
                                                 </tr>
                                                 <?php
                                             }
